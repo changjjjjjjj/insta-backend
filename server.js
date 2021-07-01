@@ -1,10 +1,9 @@
+require("dotenv").config();
 import { ApolloServer, gql } from "apollo-server";
-import client from "./client";
-import { resolvers, typeDefs } from "./schema";
+import schema from "./schema";
 
 const server = new ApolloServer({
-  typeDefs,
-  resolvers,
+  schema,
 });
 
 server
